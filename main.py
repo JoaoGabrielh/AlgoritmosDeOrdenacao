@@ -4,7 +4,7 @@ import leituraEntrada as ent
 
 # as linhas 7, 8, 9 e 10 são apenas para facilitar a vida já que ninguém quer ter que ficar escrevendo vetores aleatórios a cada execução para fazer a comparação
 
-entrada = int (input ("digite o tamanho do vetor que será aplicado ao algoritmo : "))
+entrada = int (input ("digite o tamanho do vetor que será aplicado ao algoritmo (vetor maior que 1): "))
 
 ent.entradaOrdenada(entrada)  # gera array ordenado - Melhor caso
 ent.entradaAleatoria(entrada)  # gera array aleatória - Caso Médio
@@ -66,7 +66,7 @@ def rodar1(nome,algoritmo):
 opção = int (input ("\n 1 - utilizar 1 algoritmo \n 2 - rodar todos os algoritmos \n"))
 
 if opção == 1 : 
-  print ("\n 1- Bubble Sort \n 2- Selection Sort \n 3- Insertion Sort \n 4- Merge Sort \n 5- Quick Sort \n 6- Heap sort \n 7 - Shell Sort \n 8- Comb Sort \n")
+  print ("\n 1 - Bubble Sort \n 2 - Selection Sort \n 3 - Insertion Sort \n 4 - Merge Sort \n 5 - Quick Sort \n 6 - Heap sort \n 7 - Shell Sort \n 8 - Comb Sort \n")
 
   algo = int (input("escolha um dos algoritmos pelo número da opção : "))
 
@@ -88,7 +88,7 @@ if opção == 1 :
 
   elif algo == 5 : 
 
-    rodar1 ("Quick sort" , alg.heapSort)
+    rodar1 ("Quick sort" , alg.quickSort)
 
   elif algo == 6 : 
 
@@ -96,11 +96,15 @@ if opção == 1 :
 
   elif algo == 7 : 
 
-    rodar1 ("Shell sort" , algo.shellSort)
+    rodar1 ("Shell sort" , alg.shellSort)
+
+  elif algo == 8 : 
+
+    rodar1 ("Comb sort" , alg.combSort)
 
   else : 
 
-    rodar1 ("Comb sort" , alg.combSort)
+    print ("opcao invalida")
 
 else : 
 
